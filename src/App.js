@@ -32,6 +32,8 @@ import ClickHoverFunctionality from "./Components/ClassComponent/Render Props/Cl
 import ComponentA from "./Components/ClassComponent/Context/ComponentA";
 import ComponentC from "./Components/ClassComponent/Context/ComponentC";
 import { UserProvider } from "./Components/ClassComponent/Context/UserContext";
+import AxiosGet from "./Components/HTTP/AxiosGet";
+import PostData from "./Components/HTTP/PostData";
 
 function App() {
   return (
@@ -133,6 +135,9 @@ function App() {
         <ComponentA />
       </UserProvider>
       <hr />
+      <AxiosGet />
+      <hr />
+      <PostData />
     </div>
   );
 }
