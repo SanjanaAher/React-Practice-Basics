@@ -41,6 +41,7 @@ class ConditionalRenderClass extends Component {
           2.Element Variable <br />
           3.Ternary Operator <br /> 4.Short-Circuit Operator{" "}
         </h1>
+        {/* Short Circuit Operator */}
         {this.state.isLoggedIn && <div>Short Circuit Operator</div>}
       </>
     );

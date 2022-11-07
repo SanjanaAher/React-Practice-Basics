@@ -19,6 +19,12 @@ import ListOFObjectRenderUsingMap from "./Components/FunctionalComponent/ListOFO
 import FromHandlingClassCompo from "./Components/ClassComponent/FromHandlingClassCompo";
 import ParentMountingLifecycle from "./Components/ClassComponent/ParentMountingLifecycle";
 import ParentUpdateLifecycleMethods from "./Components/ClassComponent/ParentUpdateLifecycleMethods";
+import FocusUsingRefs from "./Components/ClassComponent/FocusUsingRefs";
+import FocusUsingCallback from "./Components/ClassComponent/FocusUsingCallback";
+import ParentForwardRefs from "./Components/ClassComponent/ParentForwardRefs";
+import Portals from "./Components/FunctionalComponent/Portals";
+import ClickCounter from "./Components/ClassComponent/HigherOrderComponent/ClickCounter";
+import HoverCounter from "./Components/ClassComponent/HigherOrderComponent/HoverCounter";
 
 function App() {
   return (
@@ -86,8 +92,19 @@ function App() {
       <FromHandlingClassCompo />
       <hr />
       {/* <ParentMountingLifecycle /> */}
-      <hr />
+      {/* <hr /> */}
       <ParentUpdateLifecycleMethods />
+      <hr />
+      <FocusUsingRefs />
+      <hr />
+      <FocusUsingCallback />
+      <hr />
+      <ParentForwardRefs />
+
+      <Portals />
+      <hr />
+      <ClickCounter sname={"Aher"} />
+      <HoverCounter sname={"Aher"} />
     </div>
   );
 }
