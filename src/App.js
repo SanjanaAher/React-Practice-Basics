@@ -25,6 +25,8 @@ import ParentForwardRefs from "./Components/ClassComponent/ParentForwardRefs";
 import Portals from "./Components/FunctionalComponent/Portals";
 import ClickCounter from "./Components/ClassComponent/HigherOrderComponent/ClickCounter";
 import HoverCounter from "./Components/ClassComponent/HigherOrderComponent/HoverCounter";
+import ClickCounterTwo from "./Components/ClassComponent/Render Props/ClickCounterTwo";
+import HoverCounterTwo from "./Components/ClassComponent/Render Props/HoverCounterTwo";
 
 function App() {
   return (
@@ -105,6 +107,9 @@ function App() {
       <hr />
       <ClickCounter sname={"Aher"} />
       <HoverCounter sname={"Aher"} />
+      <hr />
+      <ClickCounterTwo />
+      <HoverCounterTwo />
     </div>
   );
 }
