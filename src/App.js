@@ -27,6 +27,11 @@ import ClickCounter from "./Components/ClassComponent/HigherOrderComponent/Click
 import HoverCounter from "./Components/ClassComponent/HigherOrderComponent/HoverCounter";
 import ClickCounterTwo from "./Components/ClassComponent/Render Props/ClickCounterTwo";
 import HoverCounterTwo from "./Components/ClassComponent/Render Props/HoverCounterTwo";
+import RenderProps from "./Components/ClassComponent/Render Props/RenderProps";
+import ClickHoverFunctionality from "./Components/ClassComponent/Render Props/ClickHoverFunctionality";
+import ComponentA from "./Components/ClassComponent/Context/ComponentA";
+import ComponentC from "./Components/ClassComponent/Context/ComponentC";
+import { UserProvider } from "./Components/ClassComponent/Context/UserContext";
 
 function App() {
   return (
@@ -108,8 +113,26 @@ function App() {
       <ClickCounter sname={"Aher"} />
       <HoverCounter sname={"Aher"} />
       <hr />
+
+      {/* <RenderProps render={(isLoggedIn) => (isLoggedIn ? "Sanju" : "Guest")} /> 
       <ClickCounterTwo />
-      <HoverCounterTwo />
+      <HoverCounterTwo /> */}
+
+      <ClickHoverFunctionality>
+        {(count, incrementCount) => (
+          <ClickCounterTwo count={count} incrementCount={incrementCount} />
+        )}
+      </ClickHoverFunctionality>
+      <ClickHoverFunctionality>
+        {(count, incrementCount) => (
+          <HoverCounterTwo count={count} incrementCount={incrementCount} />
+        )}
+      </ClickHoverFunctionality>
+      <hr />
+      <UserProvider value="sanju">
+        <ComponentA />
+      </UserProvider>
+      <hr />
     </div>
   );
 }
